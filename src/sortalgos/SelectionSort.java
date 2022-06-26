@@ -1,4 +1,4 @@
-package cormensort;
+package sortalgos;
 
 import java.util.Arrays;
 
