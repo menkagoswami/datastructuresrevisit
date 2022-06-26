@@ -1,4 +1,6 @@
 package sortalgos;
+
+import java.util.Arrays;
 /* 
 * Copyright (c) 2021, Menka Goswami
 * All rights reserved.
@@ -11,33 +13,15 @@ package sortalgos;
 * 
 * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL <COPYRIGHT HOLDER> BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
+public class CallSort {
 
-public class HeapNodes {
-
-	private int key;
-	private int id;
-
-	public int getKey() {
-		return key;
+	public static void main(String[] args) {
+		int arr[];
+		arr = new int[] {5,9,0,2,7};
+		Integer[] arrInt = 	Arrays.stream(arr).boxed().toArray(Integer[]::new);
+		Sort.insertionSort(arr);  
+		Sort.insertionSort(arrInt);
+		Sort.insertionSort(arr , -1);
+		
 	}
-
-	public void setKey(int key) {
-		this.key = key;
-	}
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	// printing only keys of the node
-	public String toString() {
-		StringBuffer sb = new StringBuffer("");
-		sb.append(key).append(" ");
-		return sb.toString();
-	}
-
 }
